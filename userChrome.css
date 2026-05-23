@@ -18,7 +18,7 @@
   --color-orange:   #FF551F;
   --color-yellow:   #F0F757;
   --color-cyan:     #2DE1FC;
-  --color-blue:     #3A5190;
+  --color-blue:     #4A9EFF;
   --color-gray:     #BEC3C8;
   --color-slate:    #C5D5E4;
 
@@ -118,7 +118,7 @@
   --uc-urlbar-rounded: 0.5;
 
   /* Tab loading progress bar (1 = show, 0 = hide) */
-  --uc-show-loading-progress: 1;
+  --uc-show-loading-progress: 0;
 
 }
 
@@ -142,6 +142,8 @@
     --tab-selected-textcolor: var(--color-yellow) !important;
 
     /* Icons */
+    --toolbarbutton-icon-fill: var(--color-gray) !important;
+    --lwt-toolbarbutton-icon-fill: var(--color-gray) !important;
     --lwt-toolbarbutton-icon-fill-attention: var(--color-yellow) !important;
     --toolbarbutton-icon-fill-attention: var(--color-yellow) !important;
 
@@ -168,6 +170,18 @@
 
   #navigator-toolbox {
     background: var(--color-zinc-900) !important;
+  }
+
+  /* Toolbar icon hover — green icon, no background */
+  toolbarbutton:hover > .toolbarbutton-icon,
+  toolbarbutton:hover > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+    fill: var(--color-green) !important;
+    color: var(--color-green) !important;
+  }
+  toolbarbutton:hover {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
   }
 
   /* Selected tab text */
